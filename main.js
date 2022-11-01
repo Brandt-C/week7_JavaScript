@@ -329,3 +329,55 @@ for (let i = 0; i<animals.length; i++){
 console.log(animals);
 
 // array.slice(start, stop) in js vs .splice
+
+
+// while (false) {
+//     return nothing;
+// };
+do {
+    console.log('one step taken');
+} while (false);
+
+//other array methods:
+// .slice(), .join(), indexOf()
+
+//.slice(<start>, <stop> )
+// py version[::]
+console.log(animals);
+console.log(animals.slice(3));
+console.log(animals.slice(2, 4))
+
+//Array.join()
+// "sep".join(iterable) -- Python
+let animals_str = animals.join(', ');
+console.log(animals_str);
+
+//indexOf()
+console.log(animals.indexOf('eagle'));
+
+// STRING method .search()
+let search_str = 'Bald Eagle';
+console.log(search_str.search('d'))
+
+// Another conditional structure!
+// switch case
+
+console.log(animals);
+
+switch (animals[0]){
+    case 'bear':
+        console.log('Oh my, a bear!');
+        break;
+    case 'cat':
+        console.log('Oh my, a cat!');
+        break;
+    case 'monkey':
+        console.log('Oh my, a monkey!');
+        break;
+    case 'eagle':
+        console.log('Oh my, a eagle!');
+        break;
+    default:
+    console.log('I have no idea what this animal is');
+    break; 
+}
