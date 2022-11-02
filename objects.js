@@ -220,4 +220,36 @@ let giveRaise = async (salary, raise) => {
     console.log(`New salary: ${new_salary}`);
 }
 
-giveRaise(40, 2)
+// giveRaise(40, 2)
+
+
+// JavaScript Closure
+
+/* A Closure is a self-invoking function, it then can be set to a variable
+and returns a func expression
+
+*/
+
+let count_up = ( function () {
+    let counter = 0;  //this is a private variable
+    return function () {console.log(counter++)}
+})()
+
+count_up();
+count_up();
+count_up();
+count_up();
+// console.log(counter)
+
+let addNames = ( () => {
+    let names = [];
+    console.log('Adding Names');
+    return (nam) => {
+        names.push(nam)
+        console.log(names)
+    }
+})()
+addNames('George');
+addNames('Bill');
+addNames('Sue');
+console.log(names)
